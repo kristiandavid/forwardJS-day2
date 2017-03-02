@@ -21,19 +21,25 @@ function check(data) {
 	);
 }
 
-var defaults = {
+function response({
+	// Descructuring
 	foo: 0,
 	bar: 4,
 	bam: {
 		qux: 0,
 		qam: 14
-	}
-};
+	} = {}
+} = {}) {
 
-function response() {
-
+	// Restructuring
 	check({
-
+		foo,
+		bar,
+		baz,
+		bam: {
+			qux,
+			qam
+		}
 	});
 
 }
